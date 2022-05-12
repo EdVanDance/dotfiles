@@ -3,6 +3,8 @@ if has("win32")
   let &runtimepath = substitute(&runtimepath,'\v(Documents and Settings|Users)[\/][^\/,]*[\/]\zsvimfiles','.vim','g')
 endif
 
+set numbers
+
 set nocompatible
 set encoding=utf8
 set fileformats=unix,dos,mac
@@ -16,7 +18,7 @@ set textwidth=80
 set colorcolumn=+1
 set cursorline
 
-set history=200
+set history=500
 set smarttab
 set linebreak
 set autoindent
@@ -264,7 +266,7 @@ augroup END
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme badwolf
+" colorscheme badwolf
 
 hi StatusLine    gui=NONE guifg=#f8f6f2 guibg=#242321 cterm=NONE ctermfg=15  ctermbg=235
 hi WildMenu      gui=NONE guifg=#f8f6f2 guibg=#0a9dff cterm=NONE ctermfg=15  ctermbg=39
