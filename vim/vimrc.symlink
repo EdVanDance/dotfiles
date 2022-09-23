@@ -73,26 +73,30 @@ endif
 " Plugins {{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
-Plug 'airblade/vim-gitgutter'
+if !exists('g:vscode')
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'airblade/vim-gitgutter'
+
+  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+  Plug 'dyng/ctrlsf.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
+    let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+  Plug 'bling/vim-airline'
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
+  Plug 'dracula/vim', { 'as': 'dracula' }
+    let g:dracula_colorterm = 0
+
+endif
 
 Plug 'easymotion/vim-easymotion'
   let g:EasyMotion_smartcase = 1
 
 Plug 'moll/vim-bbye'
-
-Plug 'dyng/ctrlsf.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-  let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-Plug 'bling/vim-airline'
-  let g:airline_powerline_fonts = 1
-  let g:airline#extensions#tabline#enabled = 1
-Plug 'dracula/vim', { 'as': 'dracula' }
-  let g:dracula_colorterm = 0
 
 call plug#end()
 " }}}
