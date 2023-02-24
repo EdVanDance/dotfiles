@@ -1,4 +1,4 @@
-# EdVanDance does dotfiles
+# metalinjection does dotfiles
 
 ## dotfiles
 
