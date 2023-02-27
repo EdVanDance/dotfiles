@@ -14,5 +14,6 @@ set keymap vi-insert
 C-c: clink-ctrl-c
 C-l: clear-screen
 M-p: clink-paste
+M-r: clink-reload
 
 $endif
