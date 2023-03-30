@@ -25,4 +25,5 @@ flexprompt.settings.right_frame = "none"
 flexprompt.settings.lean_separators = "dot"
 flexprompt.settings.use_8bit_color = true
 
+flexprompt.settings.left_prompt = flexprompt.settings.left_prompt:gsub("{battery}", "{battery:show=60}")
 flexprompt.settings.left_prompt = flexprompt.settings.left_prompt:gsub("{cwd}", "{cwd:color=blue}")
