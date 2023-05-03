@@ -12,7 +12,6 @@ if not exist %DOT%\clink\aliases (
 doskey /macrofile=%DOT%\clink\aliases
 
 :: ENV
-set _ZL_NO_CHECK=1
 set BAT_THEME=Dracula
 set FZF_DEFAULT_COMMAND=fd -t f
 set FZF_DEFAULT_OPTS=--height=40%% --layout=reverse ^
@@ -33,5 +32,3 @@ title cmd
 :path_only
 if exist %USERPROFILE%\bin\ set PATH=%USERPROFILE%\bin;%PATH%
 set PATH=%DOT%\win\bin;%PATH%
-for /F %%p in ('scoop prefix z.lua') do set PATH=%PATH%;%%p
-
