@@ -1,2 +1,2 @@
 @echo off
-wt -F -w 0 sp ; sp ; mf left
+wt -w 0 sp ; sp ; mf left

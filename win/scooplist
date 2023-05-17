@@ -7,10 +7,11 @@ fd
 fzf
 less
 lf
+lsd
 lua
 neovim
 px
 python
 ripgrep
 sudo
-z.lua
+zoxide

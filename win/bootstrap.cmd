@@ -45,12 +45,6 @@ if not exist %USERPROFILE%\.gitconfig (
   echo mklink %USERPROFILE%\.gitconfig %CD%\git\gitconfig.symlink >> %SUDOBAT%
 )
 
-if not exist %LOCALAPPDATA%\clink\z.lua (
-  mkdir %LOCALAPPDATA%\clink 2>nul
-  for /F %%p in ('scoop prefix z.lua') do set Z_LUA=%%p\z.lua
-  echo mklink %LOCALAPPDATA%\clink\z.lua %Z_LUA% >> %SUDOBAT%
-)
-
 if not exist %LOCALAPPDATA%\clink\.inputrc (
   echo mklink %LOCALAPPDATA%\clink\.inputrc %CD%\clink\inputrc >> %SUDOBAT%
 )
