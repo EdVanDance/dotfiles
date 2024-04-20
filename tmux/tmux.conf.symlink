@@ -6,6 +6,7 @@ if-shell 'test "$(uname -s)" = Darwin' 'set-option -g default-command "exec reat
 set -g default-terminal "screen-256color"
 set -g escape-time 5
 set -g alternate-screen off
+set -g bell-action none
 
 # scrollback buffer
 set -g history-limit 5000
@@ -49,15 +50,14 @@ bind p run "zsh $ZSH/bin/vim-tmux-paste"
 bind -n M-p run "zsh $ZSH/bin/vim-tmux-paste"
 
 # pane styles
-set -g window-style bg=colour238
+set -g window-style bg=colour234
 set -g window-active-style bg=0
-set -g pane-border-style fg=white,bg=colour238
+set -g pane-border-style fg=white,bg=colour234
 set -g pane-active-border-style fg=white,bg=0
 
 # statusbar
-set -g status-bg default
-set -g status-fg white
-set -g status-justify centre # center align window list
+set -g status-style fg=default,bg=0
+set -g status-justify center
 set -g window-status-style fg=default,bg=default,dim
 set -g window-status-current-style fg=default,bg=default
 set -g window-status-format "#I.#W"
