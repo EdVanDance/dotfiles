@@ -39,7 +39,7 @@ done
 
 unset config_files
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+(( $+commands[fzf] )) && eval "$(fzf --zsh)"
 
 # rbenv should be last
 (( $+commands[rbenv] )) && eval "$(rbenv init -)"
