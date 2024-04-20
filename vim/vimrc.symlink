@@ -104,7 +104,7 @@ call plug#end()
 " }}}
 
 " Key bindings {{{
-let mapleader = ","
+let mapleader = ";"
 
 inoremap kj <esc>
 inoremap jk <esc>
