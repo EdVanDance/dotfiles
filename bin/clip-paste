@@ -3,5 +3,10 @@
 if [ "$(uname -s)" = "Darwin" ] ; then
   pbpaste
 else
-  xclip -o -selection clipboard
+  if grep -qi microsoft /proc/version; then
+    # wsl: remove carriage return and trailing new line
+    powershell.exe Get-Clipboard | sed 's/\r$//' | head -c -1
+  else
+    xclip -o -selection clipboard
+  fi
 fi

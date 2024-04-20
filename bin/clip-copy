@@ -3,5 +3,9 @@
 if [ "$(uname -s)" = "Darwin" ] ; then
   cat - | pbcopy
 else
-  cat - | xclip -i -selection clipboard
+  if grep -qi microsoft /proc/version; then
+    cat - | clip.exe
+  else
+    cat - | xclip -i -selection clipboard
+  fi
 fi
